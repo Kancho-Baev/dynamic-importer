@@ -1,0 +1,57 @@
+{
+  "name": "react-dynamic-importer",
+  "version": "1.0.1",
+  "description": "React dynamic import",
+  "type": "module",
+  "main": "./dist/cjs/src/useComponent/index.js",
+  "module": "./dist/esm/src/useComponent/index.js",
+  "source": "./src/index.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/src/useComponent/index.js",
+      "require": "./dist/cjs/src/useComponent/index.js"
+    }
+  },
+  "scripts": {
+    "build": "yarn build-js & cp ./README.md ./dist/cjs/src/useComponent/",
+    "build-js": "yarn build-js-esm && yarn build-js-cjs && yarn build-js-cjs-package",
+    "build-js-esm": "tsc --project tsconfig.build.json --outDir dist/esm --module esnext",
+    "build-js-cjs": "tsc --project tsconfig.build.json --outDir dist/cjs --module commonjs",
+    "build-js-cjs-package": "echo '{\n  \"type\": \"commonjs\"\n}' > dist/cjs/package.json",
+    "tsc": "tsc --noEmit"
+  },
+  "keywords": [
+    "dynamic react",
+    "react component",
+    "react HOC",
+    "dynamic-import",
+    "webpack"
+  ],
+  "author": {
+    "name": "1",
+    "email": "1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tslib": "^2.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.0",
+    "@types/react": "^18.2.20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "files": [
+    "dist",
+    "src",
+    "example"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

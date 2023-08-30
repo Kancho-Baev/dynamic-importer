@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "component": "pages/dashboard"
+    },
+    {
+      "component": "pages/users",
+      "components": {
+        "Table": {
+          "prop1": "prop1",
+          "prop2": "prop2",
+          "component": "pages/users/customTable"
+        },
+        "Actions": {
+          "prop1": "prop1",
+          "component": "pages/users/customAction"
+        }
+      }
+    },
+    {
+      "component": "pages/users/create"
+    },
+    {
+      "prop1": "prop1",
+      "component": "pages/users/update"
+    }
+  ]
+}
