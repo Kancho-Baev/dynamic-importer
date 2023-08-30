@@ -1,6 +1,6 @@
 {
   "name": "react-dynamic-importer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "React dynamic import",
   "type": "module",
   "main": "./dist/cjs/src/useComponent/index.js",
@@ -52,6 +52,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/Kancho-Baev/dynamic-importer"
   }
 }
